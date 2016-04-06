@@ -9,7 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by Глеб on 01.04.2016.
+ * Created by Р“Р»РµР± on 01.04.2016.
  */
 public class ClientDialog extends JDialog implements ActionListener {
     private static final int D_HEIGHT = 150;
@@ -20,17 +20,17 @@ public class ClientDialog extends JDialog implements ActionListener {
     private JTextField name = new JTextField();
     private JTextField address = new JTextField();
     public ClientDialog(){
-        setTitle("Добавление клиента");
+        setTitle("Р”РѕР±Р°РІР»РµРЅРёРµ РєР»РёРµРЅС‚Р°");
         getContentPane().setLayout(new FlowLayout());
         getContentPane().setLayout(null);
 
-        JLabel l = new JLabel("Имя:", JLabel.RIGHT);
+        JLabel l = new JLabel("РРјСЏ:", JLabel.RIGHT);
         l.setBounds(L_X, 30, L_W, 20);
         getContentPane().add(l);
         name.setBounds(L_X + L_W + 10, 30, C_W, 20);
         getContentPane().add(name);
 
-        l = new JLabel("Адрес:", JLabel.RIGHT);
+        l = new JLabel("РђРґСЂРµСЃ:", JLabel.RIGHT);
         l.setBounds(L_X, 50, L_W, 20);
         getContentPane().add(l);
         address.setBounds(L_X + L_W + 10, 50, C_W, 20);
