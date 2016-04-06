@@ -3,19 +3,19 @@
  
 <html>
     <head>
-        <title>Осуществить перевод</title>
+        <title>РћСЃСѓС‰РµСЃС‚РІРёС‚СЊ РїРµСЂРµРІРѕРґ</title>
     </head>
  
     <body>
         <form action="<c:url value="/transact"/>" method="POST">
         <input type="hidden" name="fromId" value="${form.fromId}"/>
-<tr><b>Осуществить транзакцию</b></tr>
+<tr><b>РћСЃСѓС‰РµСЃС‚РІРёС‚СЊ С‚СЂР°РЅР·Р°РєС†РёСЋ</b></tr>
             <table>
                 <tr>
                      <b><c:out value="${form.fromName}"/></b>
                 </tr>
 <tr>
-<td>Аккаунт получателя:
+<td>РђРєРєР°СѓРЅС‚ РїРѕР»СѓС‡Р°С‚РµР»СЏ:
                         <select name="accTo">
                         <c:forEach var="account" items="${form.to}">
                             <option value="${account.id}"><c:out value="${account.holder.name}"/></option>
@@ -24,7 +24,7 @@
                     </td>
 </tr> </table>
                 <tr>
-                    <td>Сумма перевода:</td><td><input type="text" name="sum" value="${form.sum}"/></td>
+                    <td>РЎСѓРјРјР° РїРµСЂРµРІРѕРґР°:</td><td><input type="text" name="sum" value="${form.sum}"/></td>
                 </tr>               
             <table>
                 <tr>
