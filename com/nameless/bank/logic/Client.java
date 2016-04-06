@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
- * Created by Глеб on 05.03.2016.
+ * Created by Р“Р»РµР± on 05.03.2016.
  */
 public class Client {
     private int id;
@@ -50,6 +50,6 @@ public class Client {
 
     @Override
     public String toString() {
-        return name+", проживает по адресу: "+address;
+        return name+", ГЇГ°Г®Г¦ГЁГўГ ГҐГІ ГЇГ® Г Г¤Г°ГҐГ±Гі: "+address;
     }
 }
