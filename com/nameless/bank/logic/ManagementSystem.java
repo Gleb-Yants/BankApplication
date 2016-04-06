@@ -28,7 +28,7 @@ public class ManagementSystem {
                instance.dataSource = (DataSource) ctx.lookup("java:comp/env/jdbc/CitizensDS");
                con = dataSource.getConnection();
                 /*
-                для запуска графического интерфейса
+                РґР»СЏ Р·Р°РїСѓСЃРєР° РіСЂР°С„РёС‡РµСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
                 Class.forName("com.mysql.jdbc.Driver");
                 String url = "jdbc:mysql://localhost:3306/citizens";
                 con = DriverManager.getConnection(url, "****", "****");
@@ -242,7 +242,7 @@ public class ManagementSystem {
                 stmt.close();
             }
         }}else{
-            System.out.println("На вашем счету недостаточно денег для проведения данной операции");
+            System.out.println("РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РґРµРЅРµРі РґР»СЏ РїСЂРѕРІРµРґРµРЅРёСЏ РґР°РЅРЅРѕР№ РѕРїРµСЂР°С†РёРё");
         }
     }
 
