@@ -2,19 +2,19 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
     <head>
-        <title>Список транзакций</title>
+        <title>РЎРїРёСЃРѕРє С‚СЂР°РЅР·Р°РєС†РёР№</title>
     </head>
 
 <body>
 <form action="<c:url value="/transactions"/>" method="POST">
             <p/>
-        <b>Список транзакций:<b>
+        <b>РЎРїРёСЃРѕРє С‚СЂР°РЅР·Р°РєС†РёР№:<b>
             <br/>
             <table>
                 <tr>
-                    <th>От кого</th>
-                    <th>Кому</th>
-                    <th>Количество денег (в руб.)</th>
+                    <th>РћС‚ РєРѕРіРѕ</th>
+                    <th>РљРѕРјСѓ</th>
+                    <th>РљРѕР»РёС‡РµСЃС‚РІРѕ РґРµРЅРµРі (РІ СЂСѓР±.)</th>
                 </tr>
                 <c:forEach var="transaction" items="${form.transactions}">
                 <tr>
@@ -27,7 +27,7 @@
                 
             <table>
                 <tr>
-                    <td><input type="submit" value="К списку клиентов" name="Cancel"/></td>
+                    <td><input type="submit" value="Рљ СЃРїРёСЃРєСѓ РєР»РёРµРЅС‚РѕРІ" name="Cancel"/></td>
                 </tr>
             </table>
             
