@@ -3,20 +3,20 @@
  
 <html>
     <head>
-        <title>Добавить клиента</title>
+        <title>Р”РѕР±Р°РІРёС‚СЊ РєР»РёРµРЅС‚Р°</title>
     </head>
  
     <body>
         <form action="<c:url value="/addClient"/>" method="POST">
 <p/>
-        <b>Добавить клиента<b>
+        <b>Р”РѕР±Р°РІРёС‚СЊ РєР»РёРµРЅС‚Р°<b>
             <br/>
             <table>
                 <tr>
-                    <td>Имя:</td><td><input type="text" name="name" value="${client.name}"/></td>
+                    <td>РРјСЏ:</td><td><input type="text" name="name" value="${client.name}"/></td>
                 </tr>
                 <tr>
-                    <td>Адрес:</td><td><input type="text" name="address" value="${client.address}"/></td>
+                    <td>РђРґСЂРµСЃ:</td><td><input type="text" name="address" value="${client.address}"/></td>
                 </tr>
                 
             </table>
