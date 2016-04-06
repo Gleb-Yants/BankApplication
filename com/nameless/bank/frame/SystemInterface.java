@@ -16,7 +16,7 @@ import java.sql.SQLException;
 import java.util.Vector;
 
 /**
- * Created by Глеб on 16.03.2016.
+ * Created by Р“Р»РµР± on 16.03.2016.
  */
 public class SystemInterface extends JFrame implements ActionListener, ListSelectionListener {
     private static final String ADD_CL = "addClient";
@@ -47,8 +47,8 @@ public class SystemInterface extends JFrame implements ActionListener, ListSelec
         getContentPane().setLayout(new BorderLayout());
 
         JMenuBar menuBar = new JMenuBar();
-        JMenu menu = new JMenu("Меню");
-        JMenuItem menuItem = new JMenuItem("Отчеты");
+        JMenu menu = new JMenu("РњРµРЅСЋ");
+        JMenuItem menuItem = new JMenuItem("РћС‚С‡РµС‚С‹");
         menuItem.setName(REPORT);
         menu.add(menuItem);
         menuBar.add(menu);
@@ -57,7 +57,7 @@ public class SystemInterface extends JFrame implements ActionListener, ListSelec
 
         JPanel left = new JPanel();
         left.setLayout(new BorderLayout());
-        left.add(new JLabel("Граждане"), BorderLayout.NORTH);
+        left.add(new JLabel("Р“СЂР°Р¶РґР°РЅРµ"), BorderLayout.NORTH);
         Vector<Client> cl = new Vector<Client>(ms.getAllClients());
         clList = new JTable(new ClientTable(cl));
         clList.getSelectionModel().addListSelectionListener(this);
@@ -66,7 +66,7 @@ public class SystemInterface extends JFrame implements ActionListener, ListSelec
         left.setBorder(new BevelBorder(BevelBorder.LOWERED));
         JPanel bot = new JPanel();
         bot.setLayout(new FlowLayout());
-        JButton btnAdCl = new JButton("Добавить клиента");
+        JButton btnAdCl = new JButton("Р”РѕР±Р°РІРёС‚СЊ РєР»РёРµРЅС‚Р°");
         btnAdCl.setName(ADD_CL);
         btnAdCl.addActionListener(this);
         bot.add(btnAdCl);
@@ -74,19 +74,19 @@ public class SystemInterface extends JFrame implements ActionListener, ListSelec
 
         JPanel right = new JPanel();
         right.setLayout(new BorderLayout());
-        right.add(new JLabel("Счета"), BorderLayout.NORTH);
+        right.add(new JLabel("РЎС‡РµС‚Р°"), BorderLayout.NORTH);
         accList = new JTable();
         right.add(new JScrollPane(accList), BorderLayout.CENTER);
         right.setBorder(new BevelBorder(BevelBorder.LOWERED));
         JPanel bot2 = new JPanel();
         bot2.setLayout(new FlowLayout());
-        JButton btnAdAc = new JButton("Добавить счет");
+        JButton btnAdAc = new JButton("Р”РѕР±Р°РІРёС‚СЊ СЃС‡РµС‚");
         btnAdAc.setName(ADD_ACC);
         btnAdAc.addActionListener(this);
-        JButton btnReAc = new JButton("Удалить счет");
+        JButton btnReAc = new JButton("РЈРґР°Р»РёС‚СЊ СЃС‡РµС‚");
         btnReAc.setName(REM_ACC);
         btnReAc.addActionListener(this);
-        JButton btnTr = new JButton("Перевод денег");
+        JButton btnTr = new JButton("РџРµСЂРµРІРѕРґ РґРµРЅРµРі");
         btnTr.setName(TRANS);
         btnTr.addActionListener(this);
         bot2.add(btnAdAc);
@@ -163,7 +163,7 @@ public class SystemInterface extends JFrame implements ActionListener, ListSelec
                 accountRefresh();
             }});}else{
             JOptionPane.showMessageDialog(SystemInterface.this,
-                    "Необходимо выделить клиента");
+                    "РќРµРѕР±С…РѕРґРёРјРѕ РІС‹РґРµР»РёС‚СЊ РєР»РёРµРЅС‚Р°");
         }
     }
 
@@ -172,7 +172,7 @@ public class SystemInterface extends JFrame implements ActionListener, ListSelec
             AccountTable acTa = (AccountTable) accList.getModel();
             if (accList.getSelectedRow() >= 0) {
                 if (JOptionPane.showConfirmDialog(SystemInterface.this,
-                        "Вы хотите удалить аккаунт?", "Удаление аккаунта",
+                        "Р’С‹ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ Р°РєРєР°СѓРЅС‚?", "РЈРґР°Р»РµРЅРёРµ Р°РєРєР°СѓРЅС‚Р°",
                         JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
                     Account ac = acTa.getAccount(accList.getSelectedRow());
                     try {
@@ -184,7 +184,7 @@ public class SystemInterface extends JFrame implements ActionListener, ListSelec
                 }
             }
             else {
-                JOptionPane.showMessageDialog(SystemInterface.this, "Необходимо выделить аккаунт");
+                JOptionPane.showMessageDialog(SystemInterface.this, "РќРµРѕР±С…РѕРґРёРјРѕ РІС‹РґРµР»РёС‚СЊ Р°РєРєР°СѓРЅС‚");
             }
         }
     }
@@ -202,7 +202,7 @@ public class SystemInterface extends JFrame implements ActionListener, ListSelec
                     accountRefresh();}catch(SQLException ex){ex.printStackTrace();}
                 }});}else{
             JOptionPane.showMessageDialog(SystemInterface.this,
-                    "Необходимо выделить аккаунт");
+                    "РќРµРѕР±С…РѕРґРёРјРѕ РІС‹РґРµР»РёС‚СЊ Р°РєРєР°СѓРЅС‚");
         }
     }
     private void showTrans(){
@@ -212,7 +212,7 @@ public class SystemInterface extends JFrame implements ActionListener, ListSelec
             Account selAc = tbl.getAccount(accList.getSelectedRow());
             Vector<Transaction> acc = new Vector<Transaction>(ms.getTransactions(selAc));
             JFrame  transactions = new JFrame ();
-            transactions.setName("Список транзакций");
+            transactions.setName("РЎРїРёСЃРѕРє С‚СЂР°РЅР·Р°РєС†РёР№");
             JList translist = new JList(acc);
             transactions.add(translist);
             transactions.setVisible(true);
@@ -220,7 +220,7 @@ public class SystemInterface extends JFrame implements ActionListener, ListSelec
         }catch(SQLException ex){ex.printStackTrace();}
         }else{
             JOptionPane.showMessageDialog(SystemInterface.this,
-                    "Необходимо выделить аккаунт");
+                    "РќРµРѕР±С…РѕРґРёРјРѕ РІС‹РґРµР»РёС‚СЊ Р°РєРєР°СѓРЅС‚");
         }
     }
 }
