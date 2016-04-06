@@ -3,21 +3,21 @@
  
 <html>
     <head>
-        <title>Добавить аккаунт</title>
+        <title>Р”РѕР±Р°РІРёС‚СЊ Р°РєРєР°СѓРЅС‚</title>
     </head>
  
     <body>
         <form action="<c:url value="/addAccount"/>" method="POST">
         <input type="hidden" name="clientId" value="${form.clientId}"/>
 <p/>
-        <b>Добавить аккаунт<b>
+        <b>Р”РѕР±Р°РІРёС‚СЊ Р°РєРєР°СѓРЅС‚<b>
             <br/>
             <table>
                 <tr>
                      <td><c:out value="${form.clientName}"/></td>
                 </tr>
                 <tr>
-                    <td>Вклад:</td><td><input type="text" name="money" value="${form.money}"/></td>
+                    <td>Р’РєР»Р°Рґ:</td><td><input type="text" name="money" value="${form.money}"/></td>
                 </tr>
                 
             </table>
