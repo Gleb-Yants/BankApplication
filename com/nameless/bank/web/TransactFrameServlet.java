@@ -14,7 +14,7 @@ import java.text.ParseException;
 import java.util.Collection;
 
 /**
- * Created by √ÎÂ· on 06.04.2016.
+ * Created by –ì–ª–µ–± on 06.04.2016.
  */
 public class TransactFrameServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest req, HttpServletResponse resp)
