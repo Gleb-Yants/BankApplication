@@ -10,7 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by Глеб on 01.04.2016.
+ * Created by Р“Р»РµР± on 01.04.2016.
  */
 public class AccountDialog extends JDialog implements ActionListener {
     private static final int D_HEIGHT = 150;
@@ -23,18 +23,18 @@ public class AccountDialog extends JDialog implements ActionListener {
     private JTextField money = new JTextField();
     public AccountDialog(Client cl){
         holder=cl;
-        setTitle("Добавление аккаунта");
+        setTitle("Р”РѕР±Р°РІР»РµРЅРёРµ Р°РєРєР°СѓРЅС‚Р°");
         getContentPane().setLayout(new FlowLayout());
         getContentPane().setLayout(null);
 
-        JLabel l = new JLabel("Клиент:", JLabel.RIGHT);
+        JLabel l = new JLabel("РљР»РёРµРЅС‚:", JLabel.RIGHT);
         l.setBounds(L_X, 30, L_W, 20);
         getContentPane().add(l);
         client.setBounds(L_X + L_W + 10, 30, C_W, 20);
         client.setText(cl.getName());
         getContentPane().add(client);
 
-        l = new JLabel("Вклад", JLabel.RIGHT);
+        l = new JLabel("Р’РєР»Р°Рґ", JLabel.RIGHT);
         l.setBounds(L_X, 50, L_W, 20);
         getContentPane().add(l);
         money.setBounds(L_X + L_W + 10, 50, C_W, 20);
