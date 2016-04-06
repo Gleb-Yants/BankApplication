@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 import java.util.Vector;
 
 /**
- * Created by Глеб on 01.04.2016.
+ * Created by Р“Р»РµР± on 01.04.2016.
  */
 public class TransactionDialog extends JDialog implements ActionListener {
     private static final int D_HEIGHT = 150;
@@ -31,25 +31,25 @@ public class TransactionDialog extends JDialog implements ActionListener {
                 accounts1.add(a);
             }
         }
-        setTitle("Добавление аккаунта");
+        setTitle("Р”РѕР±Р°РІР»РµРЅРёРµ Р°РєРєР°СѓРЅС‚Р°");
         getContentPane().setLayout(new FlowLayout());
         getContentPane().setLayout(null);
 
-        JLabel l = new JLabel("Отправитель:", JLabel.RIGHT);
+        JLabel l = new JLabel("РћС‚РїСЂР°РІРёС‚РµР»СЊ:", JLabel.RIGHT);
         l.setBounds(L_X, 10, L_W, 20);
         getContentPane().add(l);
         client.setBounds(L_X + L_W + 10, 10, C_W, 20);
         client.setText(acc.getHolder().getName());
         getContentPane().add(client);
 
-        l = new JLabel("Получатель:", JLabel.RIGHT);
+        l = new JLabel("РџРѕР»СѓС‡Р°С‚РµР»СЊ:", JLabel.RIGHT);
         l.setBounds(L_X, 30, L_W, 20);
         getContentPane().add(l);
         accList = new JComboBox(new Vector<Account>(accounts1));
         accList.setBounds(L_X + L_W + 10, 30, C_W, 20);
         getContentPane().add(accList);
 
-        l = new JLabel("Сумма:", JLabel.RIGHT);
+        l = new JLabel("РЎСѓРјРјР°:", JLabel.RIGHT);
         l.setBounds(L_X, 50, L_W, 20);
         getContentPane().add(l);
         money.setBounds(L_X + L_W + 10, 50, C_W, 20);
@@ -80,7 +80,7 @@ public class TransactionDialog extends JDialog implements ActionListener {
                     ManagementSystem.getInstance().transact(accSender, (Account) accList.getSelectedItem(), Integer.parseInt(money.getText()));
                 }else{
                     JOptionPane.showMessageDialog(TransactionDialog.this,
-                            "Недостаточно средств на счете");
+                            "РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ СЃСЂРµРґСЃС‚РІ РЅР° СЃС‡РµС‚Рµ");
                 }
             } catch (Exception sql_e) {
                 JOptionPane.showMessageDialog(this, sql_e.getMessage());
