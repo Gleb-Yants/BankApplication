@@ -3,7 +3,7 @@ package com.nameless.bank.web.forms;
 import java.util.Collection;
 
 /**
- * Created by √ÎÂ· on 06.04.2016.
+ * Created by –ì–ª–µ–± on 06.04.2016.
  */
 public class TransactFrameForm {
     private int fromId;
