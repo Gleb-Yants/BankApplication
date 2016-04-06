@@ -6,7 +6,7 @@ import javax.swing.table.AbstractTableModel;
 import java.util.Vector;
 
 /**
- * Created by √ÎÂ· on 28.03.2016.
+ * Created by –ì–ª–µ–± on 28.03.2016.
  */
 public class ClientTable extends AbstractTableModel {
     private Vector clients;
@@ -27,7 +27,7 @@ public class ClientTable extends AbstractTableModel {
     }
 
     public String getColumnName(int column) {
-        String[] colNames = {"ID", "‘»Œ", "¿‰ÂÒ"};
+        String[] colNames = {"ID", "–§–ò–û", "–ê–¥—Ä–µ—Å"};
         return colNames[column];
     }
 
