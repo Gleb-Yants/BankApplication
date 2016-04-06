@@ -50,6 +50,6 @@ public class Client {
 
     @Override
     public String toString() {
-        return name+", ïðîæèâàåò ïî àäðåñó: "+address;
+        return name+", проживает по адресу: "+address;
     }
 }
