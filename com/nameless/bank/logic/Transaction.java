@@ -1,7 +1,7 @@
 package com.nameless.bank.logic;
 
 /**
- * Created by Глеб on 05.03.2016.
+ * Created by Р“Р»РµР± on 05.03.2016.
  */
 public class Transaction {
     private int id;
@@ -52,6 +52,6 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Осуществлена транзация в размере "+amount+" руб. со счета клиента "+from.getHolder().getName()+" на счет клиента "+to.getHolder().getName();
+        return "РћСЃСѓС‰РµСЃС‚РІР»РµРЅР° С‚СЂР°РЅР·Р°С†РёСЏ РІ СЂР°Р·РјРµСЂРµ "+amount+" СЂСѓР±. СЃРѕ СЃС‡РµС‚Р° РєР»РёРµРЅС‚Р° "+from.getHolder().getName()+" РЅР° СЃС‡РµС‚ РєР»РёРµРЅС‚Р° "+to.getHolder().getName();
     }
 }
