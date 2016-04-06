@@ -2,21 +2,21 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
     <head>
-        <title>Список аккаунтов</title>
+        <title>РЎРїРёСЃРѕРє Р°РєРєР°СѓРЅС‚РѕРІ</title>
     </head>
 
 <body>
 <form action="<c:url value="/accounts"/>" method="POST">
 <input type="hidden" name="clientId" value="${form.clientId}"/>
             <p/>
-        <b>Список аккаунтов:<b>
+        <b>РЎРїРёСЃРѕРє Р°РєРєР°СѓРЅС‚РѕРІ:<b>
             <br/>
             <table>
                 <tr>
                     <th> </th>
                     <th>ID</th>
-                    <th>Держатель счета</th>
-                    <th>Количество денег (в руб.)</th>
+                    <th>Р”РµСЂР¶Р°С‚РµР»СЊ СЃС‡РµС‚Р°</th>
+                    <th>РљРѕР»РёС‡РµСЃС‚РІРѕ РґРµРЅРµРі (РІ СЂСѓР±.)</th>
                 </tr>
                 <c:forEach var="account" items="${form.accounts}">
                 <tr>
@@ -30,11 +30,11 @@
                 
             <table>
                 <tr>
-                    <td><input type="submit" value="Добавить аккаунт" name="AddAcc"/></td>
-                    <td><input type="submit" value="Удалить аккаунт" name="Remove"/></td>
-                    <td><input type="submit" value="Список транзакций" name="Transactions"/></td>
-                    <td><input type="submit" value="Перевод денег" name="Transact"/></td>
-                    <td><input type="submit" value="К списку клиентов" name="Cancel"/></td>
+                    <td><input type="submit" value="Р”РѕР±Р°РІРёС‚СЊ Р°РєРєР°СѓРЅС‚" name="AddAcc"/></td>
+                    <td><input type="submit" value="РЈРґР°Р»РёС‚СЊ Р°РєРєР°СѓРЅС‚" name="Remove"/></td>
+                    <td><input type="submit" value="РЎРїРёСЃРѕРє С‚СЂР°РЅР·Р°РєС†РёР№" name="Transactions"/></td>
+                    <td><input type="submit" value="РџРµСЂРµРІРѕРґ РґРµРЅРµРі" name="Transact"/></td>
+                    <td><input type="submit" value="Рљ СЃРїРёСЃРєСѓ РєР»РёРµРЅС‚РѕРІ" name="Cancel"/></td>
                 </tr>
             </table>
             
