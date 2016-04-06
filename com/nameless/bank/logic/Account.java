@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
- * Created by √ÎÂ· on 05.03.2016.
+ * Created by –ì–ª–µ–± on 05.03.2016.
  */
 
 public class Account {
