@@ -6,7 +6,7 @@ import javax.swing.table.AbstractTableModel;
 import java.util.Vector;
 
 /**
- * Created by Глеб on 28.03.2016.
+ * Created by Р“Р»РµР± on 28.03.2016.
  */
 public class AccountTable extends AbstractTableModel {
     private Vector accounts;
@@ -27,7 +27,7 @@ public class AccountTable extends AbstractTableModel {
     }
 
     public String getColumnName(int column) {
-        String[] colNames = {"ID счета","Держатель счета", "Количество денег (руб.)"};
+        String[] colNames = {"ID СЃС‡РµС‚Р°","Р”РµСЂР¶Р°С‚РµР»СЊ СЃС‡РµС‚Р°", "РљРѕР»РёС‡РµСЃС‚РІРѕ РґРµРЅРµРі (СЂСѓР±.)"};
         return colNames[column];
     }
 
