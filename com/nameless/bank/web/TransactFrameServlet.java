@@ -22,7 +22,7 @@ public class TransactFrameServlet extends HttpServlet {
         req.setCharacterEncoding("windows-1251");
         if (req.getParameter("OK") != null) {
             try {
-                if(Integer.parseInt(req.getParameter("sum"))>=ManagementSystem.getInstance().getAccountById(Integer.parseInt(req.getParameter("fromId"))).getMoney())
+                if(Integer.parseInt(req.getParameter("sum"))<=ManagementSystem.getInstance().getAccountById(Integer.parseInt(req.getParameter("fromId"))).getMoney())
                 transact(req);
             } catch (SQLException sql_e) {
                 sql_e.printStackTrace();
